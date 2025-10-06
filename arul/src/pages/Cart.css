@@ -1,0 +1,28 @@
+.darkbtn{
+    background-color:  rgb(47, 47, 190);
+
+    border-color:  rgb(47, 47, 190);
+    border-radius: 10px;
+}
+.quanbtn{
+    border-color: rgb(201, 201, 201);
+    border-radius: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.quanbtn1{
+    border-color: rgb(201, 201, 201);
+
+    border-radius: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.qntbtn {
+    margin-top: 10px;
+}
