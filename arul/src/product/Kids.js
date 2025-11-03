@@ -6,6 +6,8 @@ import map from '../mapping/Map'
 import{useSelector,useDispatch}from "react-redux"
 import { addTocart,deleteFromCart} from '../redux/CartSlice';
 import { addTofav,deleteFromfav } from '../redux/FavSlice';
+import Navbar from '../priya/Navbar';
+import Footer from '../priya/Footer';
 
 
 function Kids() {
@@ -34,6 +36,7 @@ function Kids() {
 
    return (
      <div>
+      <Navbar/>
          <section class="sec7"><br/>
              <div class="container">
    <div class="row row-cols-4">
@@ -83,6 +86,7 @@ function Kids() {
    </div> </div>
  
          </section>
+         <Footer/>
      </div>
    )
  }

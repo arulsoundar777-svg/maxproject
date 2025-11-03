@@ -10,28 +10,53 @@ import Kids from './product/Kids';
 import Women from './product/Women';
 import Cart from './pages/Cart'
 import Fav from './pages/Fav';
+import Upload from './pages/Upload';
+import SignupForm from './pages/Signup';
+import Update from './pages/Updated';
+import Signupupdate from './pages/Signupupdate';
+import Edit from './pages/Edit';
+import Editer from './pages/Signupedit';
+import Form from './pages/Validation';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ProtectedRoute from './pages/ProtectedRoute';
 
 function App() {
   return (
     <div>
-      {/* <Tesr/> */}
       {/* <Navbar/>
       <Home/>
       <Pro/>
       <Footer/> */}
       <BrowserRouter>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
 
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={
+          <ProtectedRoute>
+          <Home/>
+          </ProtectedRoute>
+
+          }/>
         <Route path="/Pro" element={<Pro/>}/>
         <Route path='/Kids' element={<Kids/>}/>
         <Route path='/Women' element={<Women/>}/>
         <Route path="/Cart" element={<Cart/>}/>
         <Route path="/Fav" element={<Fav/>}/>
+        <Route path="/Upload" element={<Upload/>}/>
+        <Route path="/Signup" element={<SignupForm/>}/>
+        <Route path="/Update" element={<Update/>}/>
+        <Route path="/Signupupdate" element={<Signupupdate/>}/>
+        {/* <Route path="/edit/:id" element={<Edit/>}/> */}
+        <Route path="/editsignup/:id" element={<Editer/>}/>
+        <Route path="/val" element={<Form/>}/>
+         <Route path="/Login" element={<Login/>}/>
+         <Route path="/Register" element={<Register/>}/>
+
+
 
         </Routes>
-        <Footer/>      
+        {/* <Footer/>       */}
       </BrowserRouter>
     </div>
   );

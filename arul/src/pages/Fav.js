@@ -4,6 +4,8 @@ import './Fav.css';
 
 import { useSelector,useDispatch } from 'react-redux'
 import { deleteFromfav } from '../redux/FavSlice';
+import Navbar from '../priya/Navbar';
+import Footer from '../priya/Footer';
 
 const Fav = () => {
 const favItems=useSelector((state)=>state.fav.favitems);
@@ -11,6 +13,9 @@ const dispatch=useDispatch()
 
 
   return (
+    <div>
+      <Navbar/>
+    
     <div  className='container'>
       <h1 CLASS="head1"><center>FAVOURITE ITEMS</center></h1>
           <div class="row row-cols-4">
@@ -28,7 +33,7 @@ const dispatch=useDispatch()
      
  </div> </div>  </div>
    ))}
-   </div> </div>
-  )}
+   </div> </div><Footer/>
+ </div> )}
 export default Fav
 

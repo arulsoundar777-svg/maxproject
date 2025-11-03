@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import Pro from '../product/Pro';
 import Kids from '../product/Kids';
 import Women from '../product/Women';
-
+import { logout } from '../Auth';
 
 
 function Navbar() {
@@ -39,6 +39,9 @@ function Navbar() {
                 <li>
                     help
                 </li>
+                  <li>
+                     <button  class="btn btn-danger btn111" onClick={logout}>Log out</button>
+                </li>
                 </ul>
         </section>
 
@@ -60,13 +63,16 @@ function Navbar() {
     </div></div>
         <div class="col2">
             <div class="col2a">
-            <h3>SIGN UP/SIGN IN</h3>
+                <Link to="/Signup">
+                            <h3>SIGN UP/SIGN IN</h3>
+
+                </Link>
                 </div>
             <div class="col2b">
-                <Link to={"/Fav"}> <img src={heart} width="23px"/></Link> 
+                <Link to="/Fav"> <img src={heart} width="23px"/></Link> 
             </div>
             <div class="col2c">
-                <Link to={"/Cart"}><img src={cart} width="23px"/></Link>
+                <Link to="/Cart"><img src={cart} width="23px"/></Link>
             </div>
         </div>
         </section>

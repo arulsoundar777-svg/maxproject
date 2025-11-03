@@ -6,6 +6,8 @@ import Map1 from '../mapping/Map1';
 import{useSelector,useDispatch}from "react-redux"
 import { addTocart,deleteFromCart} from '../redux/CartSlice';
 import { addTofav,deleteFromfav } from '../redux/FavSlice';
+import Navbar from '../priya/Navbar';
+import Footer from '../priya/Footer';
 
 
 function Pro() {
@@ -32,6 +34,8 @@ function Pro() {
     dispatch(deleteFromfav(item))
 }
   return (
+    <>
+    <Navbar/>
     <div>
         <section class="sec7"><br/>
           <div class="container">
@@ -82,6 +86,8 @@ function Pro() {
    </div> </div>
         </section>
     </div>
+    <Footer/>
+    </>
   )
 }
 export default Pro

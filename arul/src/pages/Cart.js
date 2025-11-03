@@ -4,6 +4,8 @@ import './Cart.css';
 
 import { useSelector,useDispatch } from 'react-redux'
 import { deleteFromCart,updateQuantity } from '../redux/CartSlice';
+import Footer from '../priya/Footer';
+import Navbar from '../priya/Navbar';
 
 const Cart = () => {
 const cartitems1=useSelector((state)=>state.cart.cartitems);
@@ -21,6 +23,9 @@ const incrementCart=(id,quantity)=>{
   }
 
   return (
+    <div>
+          <Navbar/>
+
     <div className='container'>
           <div class="row row-cols-4">
 
@@ -43,7 +48,7 @@ const incrementCart=(id,quantity)=>{
      </div></div>
  </div> </div>  </div>
    ))}
-   </div> </div>
-  )}
+   </div> </div><Footer/>
+ </div> )}
 export default Cart
 

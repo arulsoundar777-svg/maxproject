@@ -8,12 +8,15 @@ import sec6pic1 from '../Images/sec6pic1.jpg'
 import sec6pic2 from '../Images/sec6pic2.jpg'
 import sec6pic3 from '../Images/sec6pic3.jpg'
 import sec6pic4 from '../Images/sec6pic4.jpg'
-
+import Navbar from '../priya/Navbar';
+import Footer from '../priya/Footer';
 
 
 function Home() {
   return (
-    <div>
+    <>
+    <Navbar/>
+      <div>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div className='sec1a'>
   <div class="carousel-inner">
@@ -63,6 +66,9 @@ function Home() {
 </section>
 
     </div>
+    <Footer/>
+    </>
+  
   )
 }
 
