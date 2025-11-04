@@ -36,7 +36,7 @@ async function run() {
 
    app.post("/maxsignup",async(req,res)=>{
       const data=req.body;
-      const result=await users.insertOne(data);
+      const result=await usersCollection.insertOne(data);
       res.send(result);
     })
   app.post("/max",async(req,res)=>{
@@ -50,7 +50,7 @@ async function run() {
     res.send(result);
   })
    app.get("/getsignup",async(req,res)=>{
-    const sdata=users.find()
+    const sdata=usersCollection.find()
     const result=await sdata.toArray();
     res.send(result);
   })
@@ -63,7 +63,7 @@ async function run() {
     app.get("/getuserid/:id",async(req,res)=>{
     const id=req.params.id;
     const obj={_id:new ObjectId(id)}
-    const result=await users.findOne(obj);
+    const result=await usersCollection.findOne(obj);
     res.send(result);
   })
   app.delete("/del/:id",async(req,res)=>{
@@ -75,7 +75,7 @@ async function run() {
     app.delete("/delsignup/:id",async(req,res)=>{
     const id=req.params.id;
     const obj={_id:new ObjectId(id)};
-    const result=await users.deleteOne(obj);
+    const result=await usersCollection.deleteOne(obj);
     res.send(result);
   })
   app.patch("/maxedit/:id",async(req,res)=>{
@@ -95,7 +95,7 @@ async function run() {
 
     const updatedata={$set:{...data}};
     const options={upsert:true};
-    const result=await users.updateOne(obj,updatedata,options);
+    const result=await usersCollection.updateOne(obj,updatedata,options);
     res.send (result);
   })
 
