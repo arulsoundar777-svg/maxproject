@@ -39,7 +39,7 @@ import { toast,ToastContainer } from 'react-toastify';
     const update={name,email,password,phone,gender,dress,hobbies,profilePic,bio,};
     console.log(update);
 
-    fetch(`http://localhost:6200/maxsignedit/${id}`,{
+    fetch(`https://maxprojectbackend.onrender.com/maxsignedit/${id}`,{
 
         method:"PATCH",
         headers:{

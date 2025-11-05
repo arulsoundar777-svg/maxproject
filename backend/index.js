@@ -8,8 +8,11 @@ const cors = require("cors")
 const app = express()
 const port = 6200
 
-app.use(cors())
-app.use(express.json())
+app.use(cors({
+  origin: ["http://localhost:3000", "https://your-frontend-domain.com"],
+  methods: ["GET", "POST", "PUT", "DELETE","PATCH"],
+  credentials: true
+}));app.use(express.json())
 
 const user=[]
 const secretkey='your secretkey'
@@ -100,6 +103,7 @@ async function run() {
   })
 
   
+
   app.post('/register', async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -167,6 +171,8 @@ async function run() {
           res.json({ valid: true, username: decoded.username });
         });
 });
+
+
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

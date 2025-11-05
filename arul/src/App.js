@@ -38,9 +38,18 @@ function App() {
           </ProtectedRoute>
 
           }/>
-        <Route path="/Pro" element={<Pro/>}/>
+        <Route path="/Pro" element={
+          <ProtectedRoute>
+          <Pro/>
+
+          </ProtectedRoute>
+          }/>
         <Route path='/Kids' element={<Kids/>}/>
-        <Route path='/Women' element={<Women/>}/>
+        <Route path='/Women' element={
+          
+          <Women/>
+          
+          }/>
         <Route path="/Cart" element={<Cart/>}/>
         <Route path="/Fav" element={<Fav/>}/>
         <Route path="/Upload" element={<Upload/>}/>

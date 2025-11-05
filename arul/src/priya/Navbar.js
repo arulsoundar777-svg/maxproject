@@ -44,6 +44,7 @@ function Navbar() {
                 </li>
                 </ul>
         </section>
+        
 
         <section class="sec2">
 

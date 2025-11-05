@@ -43,7 +43,7 @@ const SignupForm = () => {
     };
 
     // Simulate POST request
-    fetch('http://localhost:6200/maxsignup', {
+    fetch('https://maxprojectbackend.onrender.com/maxsignup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -24,7 +24,7 @@ const Signupupdate = () => {
 
 const DeleteItems = (id) => {
 
-    fetch(`http://localhost:6200/delsignup/${id}`, {
+    fetch(`https://maxprojectbackend.onrender.com/delsignup/${id}`, {
 
       method: "DELETE",
     })
