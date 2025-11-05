@@ -9,7 +9,7 @@ const app = express()
 const port = 6200
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://your-frontend-domain.com"],
+  origin: ["http://localhost:3000", "https://maxproject.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE","PATCH"],
   credentials: true
 }));app.use(express.json())
