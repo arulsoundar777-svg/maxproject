@@ -38,20 +38,19 @@ function App() {
           </ProtectedRoute>
 
           }/>
-        <Route path="/Pro" element={
+        <Route path="/Pro" element={<Pro/> }/>
+        <Route path='/Kids' element={<Kids/>}/>
+        <Route path='/Women' element={<Women/> }/>
+        <Route path="/Cart" element={
           <ProtectedRoute>
-          <Pro/>
-
+          <Cart/>
           </ProtectedRoute>
           }/>
-        <Route path='/Kids' element={<Kids/>}/>
-        <Route path='/Women' element={
-          
-          <Women/>
-          
+        <Route path="/Fav" element={
+        <ProtectedRoute>
+          <Fav/>
+        </ProtectedRoute>
           }/>
-        <Route path="/Cart" element={<Cart/>}/>
-        <Route path="/Fav" element={<Fav/>}/>
         <Route path="/Upload" element={<Upload/>}/>
         <Route path="/Signup" element={<SignupForm/>}/>
         <Route path="/Update" element={<Update/>}/>
